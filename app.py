@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-from sklearn.ensemble import RandomForestClassifier  # or whatever estimator you trained
-
+import sklearn  # ensures the module is registered for pickle
+from sklearn.ensemble import RandomForestClassifier  
 MODEL_NAME = "age_detector_model"
 @st.cache_resource
 def load_model(model_name):
