@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import pickle
 import sklearn
+from sklearn.ensemble import RandomForestClassifier  # or whatever estimator you trained
+
 MODEL_NAME = "age_detector_model"
 @st.cache_resource
 def load_model(model_name):
